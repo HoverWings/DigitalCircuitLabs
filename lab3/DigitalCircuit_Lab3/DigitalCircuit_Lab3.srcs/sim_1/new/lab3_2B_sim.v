@@ -23,12 +23,12 @@
 module lab3_2B_sim
 (
 );
-reg X = 0;
-always #30 X<=~X;
-wire Z;
-wire Q1;
-wire Q2;
-wire Q3;
-wire Q4;
-lab3_2B lab3_2B_test(X,Q1,Q2,Q3,Q4,Z);
+    reg X = 0;
+    always #10 X<=~X;
+    wire Z;
+    wire Q1;
+    wire Q2;
+    wire Q3;
+    wire Q4;
+    lab3_2B lab3_2B_test(X,Q1,Q2,Q3,Q4,Z);
 endmodule

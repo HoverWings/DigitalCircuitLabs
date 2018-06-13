@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 06/04/2018 03:47:48 PM
+// Create Date: 06/12/2018 07:35:25 PM
 // Design Name: 
 // Module Name: lab4_1_sim
 // Project Name: 
@@ -20,29 +20,37 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module lab4_1_sim();
-    reg A, B, C, D, LD, CLR, CP, M;
-    wire Qcc, Qa, Qb, Qc, Qd;
-    
-    initial begin
-        A = 0;
-        B = 0;
-        C = 0;
-        D = 0;
-        LD = 1;
-        CLR = 1;
-        CP = 0;
-        M = 1;
+
+module lab4_1_sim
+(
+);
+    reg  [3:0] in;
+    wire  [3:0] Q;
+    reg CP, M, CLR, LD;
+    wire Qcc; // out pluse
+    initial begin // set init val
+        CP = 0; 
+        in<=4'b0010;
+        M<=1;
+        CLR<=1;
+        LD<=1;
     end
-        
-    initial begin // set delay
-        #25     CLR = 0;
-        #45     CLR = 1;
-        #100    M = 0;
-        #125    LD = 1;
-        #145    LD = 0;
-    end 
-    
-    always #10 CP = ~CP;
-    lab4_1 lab4_1_test(A, B, C, D, LD, CLR, CP, M, Qcc, Qa, Qb, Qc, Qd);
+    initial begin   // set triger
+            #25 LD = 0; // output directly
+            #45 LD = 1;
+            #65 CLR = 0;//set 0
+            #85 CLR = 1;
+            #360 M = 0;
+    end
+        always #10 CP = ~CP; 
+    lab4_1_divider lab4_1_test_divider
+        (
+        .in(in),
+        .clk(CP),
+        .CLR(CLR),
+        .LD(LD),
+        .M(M),
+        .Q(Q),
+        .Qcc(Qcc)
+        );
 endmodule

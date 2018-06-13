@@ -18,33 +18,42 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+//module FSM
+//(
+//    input x,
+//    input clk,
+//    output reg y,
+//    output reg [3:0] out
+//);
 
-
-module lab4_2_sim
+module FSM_sim
 (
 );
-    reg CP;
-    reg X;
-    reg RST;
-    wire [2:0] state;
-    wire Z; 
-    lab4_2 lab4_2_test(CP, X, RST, state, Z); 
-    initial
-        begin
-        CP = 0;
-        X = 0;
-        RST = 1;
-        end
-    initial
-        begin
-        #35 X = 1;
-        #50 X = 0;
-        #10 X = 1;
-        #20 X = 0;
-        #20 X = 1;
-        #20 RST = 0; 
-        #60 RST = 1;
-        #25 $stop;
-        end
-    always #5 CP = ~CP;
+    reg x;
+    reg clk;
+    wire y;
+    wire [2:0] current_state;
+    FSM FSM_test(x, clk, y, current_state); 
+    initial begin
+        x = 0;
+        clk = 0;
+    end
+    always #10 clk = ~clk;
+    initial begin //10110
+         x <= #45 1;
+         x <= #65 0;
+         x <= #85 1;
+         x <= #105 1;
+         x <= #125 0;
+         x <= #145 1;
+         x <= #165 0;
+         x <= #185 1;
+         x <= #205 1;
+         x <= #225 1;
+        //#25 $stop;
+    end
+    
 endmodule
+
+
+

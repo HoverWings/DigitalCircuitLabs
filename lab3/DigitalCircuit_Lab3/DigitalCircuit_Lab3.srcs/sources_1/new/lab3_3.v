@@ -29,8 +29,7 @@ module lab3_3_divider(clk,sig_nsyn,led); // top module
     divider sub_divider
     (
     .clk(clk),
-    .clk_N(clk_N),
-    .delay(delay)
+    .clk_need(clk_N)
     );
     
     pipe3b sub_pipe3b
@@ -69,30 +68,30 @@ module pipe3b
     end        
 endmodule
 
-
-//D:for divider clk into clj_N
-module divider(clk,clk_N,delay);
-    input clk;                      
-    input delay;                
-    output clk_N;                   
-    reg clk_N;
-    parameter N = 100_000_000;     // 1Hz,N=fclk/fclk_N
-
-
-    reg [31:0] counter;            
-
-    always @(posedge clk)           
-    begin    
-       if(counter==delay)
+module divider
+(
+    input clk,
+    //input [31:0] frequency_need,
+    output reg clk_need
+);
+    parameter frequency_before = 32'd100_000_000;  
+    reg [31:0] counter;
+    parameter frequency_need = 1;   
+    wire [31:0] N; 
+    
+    assign N = (frequency_before/frequency_need) / 2;
+    initial counter = 0;
+    initial clk_need = 0;   
+    
+    always @(posedge clk)
         begin
-            clk_N<=~clk_N;
-            counter<=32'd0;
+            counter <= counter+1;
+            if(counter == N-1)   
+            begin 
+                clk_need <= ~clk_need;
+                counter <= 0;
+            end
         end
-    else
-        begin
-            counter<=counter+32'd1;
-        end                             
-    end                           
 endmodule
 
 

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Jun 13 16:35:17 2018
+# Process ID: 20427
+# Current directory: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab3/DigitalCircuit_Lab3/DigitalCircuit_Lab3.runs/impl_1
+# Command line: vivado -log lab3_3_divider.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source lab3_3_divider.tcl -notrace
+# Log file: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab3/DigitalCircuit_Lab3/DigitalCircuit_Lab3.runs/impl_1/lab3_3_divider.vdi
+# Journal file: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab3/DigitalCircuit_Lab3/DigitalCircuit_Lab3.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source lab3_3_divider.tcl -notrace

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Jun 13 20:14:09 2018
+# Process ID: 23855
+# Current directory: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.runs/synth_1
+# Command line: vivado -log lab4_3B.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab4_3B.tcl
+# Log file: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.runs/synth_1/lab4_3B.vds
+# Journal file: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source lab4_3B.tcl -notrace

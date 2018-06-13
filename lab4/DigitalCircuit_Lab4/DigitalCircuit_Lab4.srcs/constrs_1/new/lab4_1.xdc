@@ -1,3 +1,12 @@
+#input A,
+#input B,
+#input C,
+#input D, 
+#input LD,   // prefabricated control
+#input CLR,  // set 0
+#input clk,
+#input M,    //chose mode
+
 #Bank = 35, Pin name = IO_L12P_T1_MRCC_35,					Sch name = CLK100MHZ
 set_property PACKAGE_PIN E3 [get_ports clk]							
 	set_property IOSTANDARD LVCMOS33 [get_ports clk]
@@ -27,7 +36,6 @@ set_property PACKAGE_PIN V6 [get_ports {M}]
 	set_property IOSTANDARD LVCMOS33 [get_ports {M}]
 
 
-	
 # LEDs
 #Bank = 34, Pin name = IO_L24N_T3_34,                        Sch name = LED0
 set_property PACKAGE_PIN T8 [get_ports {Qa}]                    

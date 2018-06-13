@@ -19,52 +19,84 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
-module lab4_2
+module FSM
 (
-    input CP,
-    input X,
-    input RST,
-    output reg [2:0] state,
-    output reg Z
-    );
-    initial
-        begin
-        state = 3'b000;
-        Z = 0;
-        end
-    always @ (posedge CP)
-        begin
-        if(RST)
-            begin
-            case(state)
-                3'b000: state <= X==1 ? 3'b001 : 3'b000;
-                3'b001: state <= X==1 ? 3'b001 : 3'b010;
-                3'b010: state <= X==1 ? 3'b011 : 3'b000;
-                3'b011: state <= X==1 ? 3'b100 : 3'b010;
-                3'b100: state <= X==1 ? 3'b001 : 3'b000;
-                default: state <= 3'b000;
-            endcase
-            end
-        else
-            state = 3'b000;
-        end 
-    always @ (posedge CP)
-        begin
-        if(RST == 1)
-            case(state)
-            3'b100: if(X == 0)  Z = 1;
-                    else        Z = 0;
-            default: Z = 0;
-            endcase
-        else
-            Z = 0;
-        end
-    always @ (Z)
-        #5 Z = 0;
-    always @ (negedge RST)
-        begin
-        state = 3'b000;
-        Z = 0;
-        end
+    input x,
+    input clk,
+    output reg y,
+    output reg [3:0] out
+);
+    parameter S0=0,S1=1,S2=2,S3=3,S4=4;
+    reg [2:0] current_state,next_state;
+    
+    initial begin
+    y<=0;
+    current_state = S0;
+    out=4'b0000;
+    end
+    always @(negedge clk)begin
+        current_state<=next_state;
+        if(current_state==S0) 
+            out<=4'b0000;
+        else if(current_state==S1) 
+            out<=4'b0001;
+        else if(current_state==S2) 
+            out<=4'b0010;
+        else if(current_state==S3) 
+            out<=4'b0100;
+        else if(current_state==S4) 
+            out<=4'b1000; 
+    end    
+    always @(current_state or x) begin
+          case(current_state)
+            S0:begin
+                    y<=0;
+                    if(x) begin
+                          next_state<=S1;  
+                           end
+                     else begin 
+                            next_state<=S0;
+                           end       
+                end
+            S1:begin
+                    y<=0;
+                    if(x) begin
+                          next_state<=S1;  
+                           end
+                     else begin 
+                        next_state<=S2;
+                        end   
+                end
+            S2:begin
+                    y<=0;
+                     if(x) begin
+                      next_state<=S3;  
+                     end
+                    else begin 
+                    next_state<=S0;
+                    end  
+                end
+            S3:begin
+                    y<=0;
+                     if(x) begin
+                       next_state<=S4;  
+                      end
+                      else begin 
+                      next_state<=S2;
+                      end  
+                    next_state<=x? S4:S2;
+                end
+            S4:begin
+                    y<=x?0:1;
+                    next_state<=x? S1:S0;
+                end
+            default:begin
+                    y<=0;
+                    next_state<=S0;
+                    end    
+        endcase
+     end 
 endmodule
+
+
+

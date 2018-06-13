@@ -24,8 +24,12 @@ module lab3_1B
 (
     input X,
     input clk,
-    output reg Y
+    output reg Y,
+    output reg Q0,
+    output reg Q1,
+    output reg T1
 );
+
 reg Q0=1'b0;
 reg Q1=1'b0;
 reg T1=1'b0;
