@@ -26,7 +26,11 @@ module FSM
     output reg y,
     output reg [3:0] out
 );
-    parameter S0=0,S1=1,S2=2,S3=3,S4=4;
+    parameter S0=0, //init
+    S1=1,   //1
+    S2=2,   //10
+    S3=3,   //101
+    S4=4;   //1011
     reg [2:0] current_state,next_state;
     
     initial begin
@@ -34,8 +38,9 @@ module FSM
     current_state = S0;
     out=4'b0000;
     end
+    
     always @(negedge clk)begin
-        current_state<=next_state;
+        current_state=next_state;
         if(current_state==S0) 
             out<=4'b0000;
         else if(current_state==S1) 
@@ -90,6 +95,7 @@ module FSM
                     y<=x?0:1;
                     next_state<=x? S1:S0;
                 end
+            
             default:begin
                     y<=0;
                     next_state<=S0;

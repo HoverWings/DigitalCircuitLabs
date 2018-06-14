@@ -1,0 +1,75 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date         : Thu Jun 14 10:12:13 2018
+| Host         : hover running 64-bit Arch Linux
+| Command      : report_methodology -file mod8_counter_methodology_drc_routed.rpt -pb mod8_counter_methodology_drc_routed.pb -rpx mod8_counter_methodology_drc_routed.rpx
+| Design       : mod8_counter
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 7
++-----------+----------+------------------------------------------------------+------------+
+| Rule      | Severity | Description                                          | Violations |
++-----------+----------+------------------------------------------------------+------------+
+| TIMING-17 | Warning  | Non-clocked sequential cell                          | 5          |
+| XDCC-4    | Warning  | User Clock constraint overwritten with the same name | 2          |
++-----------+----------+------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin sub_lab4_1_divider/sub_lab4_1/Q_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin sub_lab4_1_divider/sub_lab4_1/Q_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Warning
+Non-clocked sequential cell  
+The clock pin sub_lab4_1_divider/sub_lab4_1/Q_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Warning
+Non-clocked sequential cell  
+The clock pin sub_lab4_1_divider/sub_lab4_1/Q_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Warning
+Non-clocked sequential cell  
+The clock pin sub_lab4_1_divider/sub_lab4_1/Qcc_reg/C is not reached by a timing clock
+Related violations: <none>
+
+XDCC-4#1 Warning
+User Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous user clock constraint with the same name.
+New: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk] (Source: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc (Line: 10))
+Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk] (Source: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc (Line: 15))
+Related violations: <none>
+
+XDCC-4#2 Warning
+User Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous user clock constraint with the same name.
+New: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk] (Source: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc (Line: 15))
+Previous: create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk] (Source: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc (Line: 13))
+Related violations: <none>
+
+

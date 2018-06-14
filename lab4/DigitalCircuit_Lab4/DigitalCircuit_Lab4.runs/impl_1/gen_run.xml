@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1528942203">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1528942203">
   <File Type="PA-TCL" Name="mod8_counter.tcl"/>
+  <File Type="PLACE-DCP" Name="mod8_counter_placed.dcp"/>
   <File Type="REPORTS-TCL" Name="mod8_counter_reports.tcl"/>
-  <File Type="RDS-RDS" Name="mod8_counter.vds"/>
-  <File Type="RDS-DCP" Name="mod8_counter.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="mod8_counter_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="mod8_counter_utilization_synth.rpt"/>
+  <File Type="PWROPT-DCP" Name="mod8_counter_pwropt.dcp"/>
+  <File Type="OPT-DCP" Name="mod8_counter_opt.dcp"/>
+  <File Type="OPT-DRC" Name="mod8_counter_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="mod8_counter.hwdef"/>
+  <File Type="RDI-RDI" Name="mod8_counter.vdi"/>
+  <File Type="PLACE-IO" Name="mod8_counter_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="mod8_counter_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="mod8_counter_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="mod8_counter_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="mod8_counter_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="mod8_counter_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="mod8_counter_physopt.dcp"/>
+  <File Type="BG-BIT" Name="mod8_counter.bit"/>
+  <File Type="ROUTE-STATUS-PB" Name="mod8_counter_route_status.pb"/>
+  <File Type="BG-BIN" Name="mod8_counter.bin"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="mod8_counter_timing_summary_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="mod8_counter.msk"/>
+  <File Type="ROUTE-TIMING-PB" Name="mod8_counter_timing_summary_routed.pb"/>
+  <File Type="BITSTR-RBT" Name="mod8_counter.rbt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="mod8_counter_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-NKY" Name="mod8_counter.nky"/>
+  <File Type="BITSTR-BMM" Name="mod8_counter_bd.bmm"/>
+  <File Type="ROUTE-CLK" Name="mod8_counter_clock_utilization_routed.rpt"/>
+  <File Type="BG-DRC" Name="mod8_counter.drc"/>
+  <File Type="ROUTE-ERROR-DCP" Name="mod8_counter_routed_error.dcp"/>
+  <File Type="BITSTR-MMI" Name="mod8_counter.mmi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="mod8_counter_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BGN" Name="mod8_counter.bgn"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="mod8_counter_routed_bb.dcp"/>
+  <File Type="BITSTR-SYSDEF" Name="mod8_counter.sysdef"/>
+  <File Type="BITSTR-LTX" Name="mod8_counter.ltx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="mod8_counter_postroute_physopt.dcp"/>
+  <File Type="ROUTE-STATUS" Name="mod8_counter_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="mod8_counter_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="mod8_counter_power_summary_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="mod8_counter_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-PWR" Name="mod8_counter_power_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="mod8_counter_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="mod8_counter_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-PB" Name="mod8_counter_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="mod8_counter_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC" Name="mod8_counter_drc_routed.rpt"/>
+  <File Type="ROUTE-DCP" Name="mod8_counter_routed.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/lab4_1.v">
@@ -109,7 +150,15 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-    <Step Id="synth_design"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
   </Strategy>
 </GenRun>

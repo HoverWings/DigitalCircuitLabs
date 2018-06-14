@@ -2,30 +2,35 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Wed Jun 13 20:14:09 2018
-# Process ID: 23855
+# Start of session at: Thu Jun 14 10:10:04 2018
+# Process ID: 17515
 # Current directory: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.runs/synth_1
-# Command line: vivado -log lab4_3B.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab4_3B.tcl
-# Log file: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.runs/synth_1/lab4_3B.vds
+# Command line: vivado -log mod8_counter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mod8_counter.tcl
+# Log file: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.runs/synth_1/mod8_counter.vds
 # Journal file: /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source lab4_3B.tcl -notrace
-Command: synth_design -top lab4_3B -part xc7a100tcsg324-1
+source mod8_counter.tcl -notrace
+Command: synth_design -top mod8_counter -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23899 
+INFO: Helper process launched with PID 17527 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1295.230 ; gain = 86.691 ; free physical = 160 ; free virtual = 10556
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1295.227 ; gain = 86.691 ; free physical = 1104 ; free virtual = 11428
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'lab4_3B' [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_3B.v:1]
-	Parameter WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'lab4_3A' [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_3B.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'lab4_3A' (1#1) [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_3B.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'lab4_3B' (2#1) [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_3B.v:1]
+INFO: [Synth 8-6157] synthesizing module 'mod8_counter' [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/mod8_counter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'lab4_1_divider' [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'divider' [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_1.v:99]
+	Parameter frequency_before bound to: 100000000 - type: integer 
+	Parameter frequency_need bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider' (1#1) [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_1.v:99]
+INFO: [Synth 8-6157] synthesizing module 'lab4_1' [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_1.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'lab4_1' (2#1) [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_1.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'lab4_1_divider' (3#1) [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mod8_counter' (4#1) [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/mod8_counter.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1339.840 ; gain = 131.301 ; free physical = 213 ; free virtual = 10569
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1339.836 ; gain = 131.301 ; free physical = 1115 ; free virtual = 11439
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -38,10 +43,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1339.840 ; gain = 131.301 ; free physical = 212 ; free virtual = 10568
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1339.836 ; gain = 131.301 ; free physical = 1115 ; free virtual = 11440
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1339.840 ; gain = 131.301 ; free physical = 212 ; free virtual = 10568
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1339.836 ; gain = 131.301 ; free physical = 1115 ; free virtual = 11440
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -49,15 +54,18 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'A'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:17]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'A'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:18]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:13]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:13]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'B'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'B'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'C'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:23]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:23]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -69,24 +77,6 @@ CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/h
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'D'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:27]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LD'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LD'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CLR'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CLR'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'M'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'M'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:36]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'Qa'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:41]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:41]
@@ -112,108 +102,14 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-584] No ports matched 'Qd'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:51]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:51]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Qcc'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:53]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:53]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Qcc'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:54]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc:54]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lab4_3B_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/lab4_3B_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mod8_counter_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/mod8_counter_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:15]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:15]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-WARNING: [Vivado 12-584] No ports matched 'in[0]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in[0]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in[1]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in[1]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in[2]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in[2]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in[3]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'in[3]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LD'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LD'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CLR'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'CLR'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'M'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'M'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Q[0]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Q[0]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:43]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Q[1]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:45]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:45]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Q[1]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:46]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:46]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Q[2]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:48]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:48]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Q[2]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:49]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:49]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Q[3]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:51]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:51]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Q[3]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:52]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:52]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Qcc'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:54]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:54]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'Qcc'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:55]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc:55]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_1_B.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mod8_counter_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/mod8_counter_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:8]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:8]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:9]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:9]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'clk'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:10]
-CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:10]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
 WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:14]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:14]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -353,48 +249,161 @@ WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [/home/wings/OneDrive/Labs/D
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:85]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:87]
-INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:87]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:87]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:88]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:88]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:90]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:90]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:91]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:91]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Red'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Red'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Green'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Green'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Blue'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Blue'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Red'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Red'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Green'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Green'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:128]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Blue'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Blue'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SEG[0]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SEG[0]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SEG[1]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SEG[1]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SEG[2]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:143]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SEG[2]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SEG[3]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SEG[3]'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:147]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/Nexys4_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mod8_counter_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/mod8_counter_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_3.xdc]
 Finished Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_3.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lab4_3B_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/lab4_3B_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_2.xdc]
-WARNING: [Vivado 12-507] No nets matched 'clk'. [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_2.xdc:2]
 Finished Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_2.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_2.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mod8_counter_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/mod8_counter_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_3A.xdc]
+Finished Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_3A.xdc]
+Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_3B.xdc]
+Finished Parsing XDC File [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_3B.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1686.152 ; gain = 0.000 ; free physical = 140 ; free virtual = 10311
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1704.609 ; gain = 0.000 ; free physical = 841 ; free virtual = 11178
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 209 ; free virtual = 10381
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 915 ; free virtual = 11254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 209 ; free virtual = 10381
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 915 ; free virtual = 11254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 210 ; free virtual = 10382
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 915 ; free virtual = 11254
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'F_reg' [/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_3B.v:29]
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk_need" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "Qcc" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Qcc" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 202 ; free virtual = 10374
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 906 ; free virtual = 11245
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -406,9 +415,19 @@ Report RTL Partitions:
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      3 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -416,11 +435,31 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module lab4_3A 
+Module mod8_counter 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
+Module lab4_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -437,8 +476,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "sub_lab4_1_divider/sub_divider/counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "sub_lab4_1_divider/sub_divider/clk_need" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 191 ; free virtual = 10364
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 893 ; free virtual = 11234
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -449,14 +490,16 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'sys_clk_pin'
+WARNING: [Synth 8-565] redefining clock 'sys_clk_pin'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 122 ; free virtual = 10240
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 756 ; free virtual = 11097
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 122 ; free virtual = 10239
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 753 ; free virtual = 11095
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -468,7 +511,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 122 ; free virtual = 10240
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 753 ; free virtual = 11095
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -492,7 +535,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 122 ; free virtual = 10240
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 754 ; free virtual = 11095
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -505,7 +548,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 122 ; free virtual = 10240
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 754 ; free virtual = 11095
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -517,25 +560,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 122 ; free virtual = 10240
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 754 ; free virtual = 11095
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 122 ; free virtual = 10240
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 754 ; free virtual = 11095
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 122 ; free virtual = 10240
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 754 ; free virtual = 11095
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 122 ; free virtual = 10240
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 754 ; free virtual = 11095
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -548,49 +591,49 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |LUT2 |    12|
-|2     |LUT3 |     1|
-|3     |LUT5 |     1|
-|4     |LUT6 |     1|
-|5     |LDC  |     3|
-|6     |LDCP |     6|
-|7     |IBUF |     6|
-|8     |OBUF |    12|
-+------+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     8|
+|3     |LUT1   |     2|
+|4     |LUT3   |     2|
+|5     |LUT4   |     7|
+|6     |LUT5   |     6|
+|7     |LUT6   |     3|
+|8     |FDRE   |    38|
+|9     |IBUF   |     8|
+|10    |OBUF   |     5|
++------+-------+------+
 
 Report Instance Areas: 
-+------+-----------+----------+------+
-|      |Instance   |Module    |Cells |
-+------+-----------+----------+------+
-|1     |top        |          |    42|
-|2     |  lab4_3A1 |lab4_3A   |     8|
-|3     |  lab4_3A2 |lab4_3A_0 |     8|
-|4     |  lab4_3A3 |lab4_3A_1 |     8|
-+------+-----------+----------+------+
++------+---------------------+---------------+------+
+|      |Instance             |Module         |Cells |
++------+---------------------+---------------+------+
+|1     |top                  |               |    80|
+|2     |  sub_lab4_1_divider |lab4_1_divider |    66|
+|3     |    sub_divider      |divider        |    52|
+|4     |    sub_lab4_1       |lab4_1         |    14|
++------+---------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 122 ; free virtual = 10240
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 754 ; free virtual = 11095
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1686.152 ; gain = 131.301 ; free physical = 177 ; free virtual = 10295
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:47 . Memory (MB): peak = 1686.152 ; gain = 477.613 ; free physical = 177 ; free virtual = 10295
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1704.609 ; gain = 131.301 ; free physical = 806 ; free virtual = 11148
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 1704.609 ; gain = 496.074 ; free physical = 806 ; free virtual = 11148
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 9 instances were transformed.
-  LDC => LDCE: 3 instances
-  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 6 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-18 Infos, 102 Warnings, 103 Critical Warnings and 0 Errors encountered.
+30 Infos, 102 Warnings, 100 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:49 . Memory (MB): peak = 1686.152 ; gain = 490.375 ; free physical = 200 ; free virtual = 10293
-INFO: [Common 17-1381] The checkpoint '/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.runs/synth_1/lab4_3B.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file lab4_3B_utilization_synth.rpt -pb lab4_3B_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1686.152 ; gain = 0.000 ; free physical = 201 ; free virtual = 10294
-INFO: [Common 17-206] Exiting Vivado at Wed Jun 13 20:15:07 2018...
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 1704.609 ; gain = 508.836 ; free physical = 803 ; free virtual = 11144
+INFO: [Common 17-1381] The checkpoint '/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.runs/synth_1/mod8_counter.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file mod8_counter_utilization_synth.rpt -pb mod8_counter_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1728.621 ; gain = 0.000 ; free physical = 802 ; free virtual = 11144
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 14 10:10:56 2018...

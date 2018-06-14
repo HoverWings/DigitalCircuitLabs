@@ -52,4 +52,4 @@ set_property PACKAGE_PIN T6 [get_ports {Q[3]}]
     set_property IOSTANDARD LVCMOS33 [get_ports {Q[3]}]
 #Bank = 34, Pin name = IO_L12P_T1_MRCC_34,					Sch name = LED4
 set_property PACKAGE_PIN T5 [get_ports {Qcc}]                    
-    set_property IOSTANDARD LVCMOS33 [get_ports {Qcc}]  
+    set_property IOSTANDARD LVCMOS33 [get_ports {Qcc}]  //

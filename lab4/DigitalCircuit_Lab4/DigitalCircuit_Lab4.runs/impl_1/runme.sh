@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.runs/synth_1'
+HD_PWD='/home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +36,8 @@ EAStep()
      fi
 }
 
-EAStep vivado -log mod8_counter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mod8_counter.tcl
+# pre-commands:
+/bin/touch .init_design.begin.rst
+EAStep vivado -log mod8_counter.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source mod8_counter.tcl -notrace
+
+

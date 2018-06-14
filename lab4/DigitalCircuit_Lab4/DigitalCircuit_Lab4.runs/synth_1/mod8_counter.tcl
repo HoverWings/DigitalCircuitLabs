@@ -16,6 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -27,7 +28,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_3B.v
+read_verilog -library xil_defaultlib {
+  /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/lab4_1.v
+  /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/sources_1/new/mod8_counter.v
+}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -51,15 +55,21 @@ set_property used_in_implementation false [get_files /home/wings/OneDrive/Labs/D
 read_xdc /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_2.xdc
 set_property used_in_implementation false [get_files /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_2.xdc]
 
+read_xdc /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_3A.xdc
+set_property used_in_implementation false [get_files /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_3A.xdc]
+
+read_xdc /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_3B.xdc
+set_property used_in_implementation false [get_files /home/wings/OneDrive/Labs/DigitalCircuitLabs/lab4/DigitalCircuit_Lab4/DigitalCircuit_Lab4.srcs/constrs_1/new/lab4_3B.xdc]
+
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 
-synth_design -top lab4_3B -part xc7a100tcsg324-1
+synth_design -top mod8_counter -part xc7a100tcsg324-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef lab4_3B.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file lab4_3B_utilization_synth.rpt -pb lab4_3B_utilization_synth.pb"
+write_checkpoint -force -noxdef mod8_counter.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file mod8_counter_utilization_synth.rpt -pb mod8_counter_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

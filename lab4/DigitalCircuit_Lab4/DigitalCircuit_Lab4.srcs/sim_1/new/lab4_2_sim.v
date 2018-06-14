@@ -32,7 +32,7 @@ module FSM_sim
     reg x;
     reg clk;
     wire y;
-    wire [2:0] current_state;
+    wire [3:0] current_state;
     FSM FSM_test(x, clk, y, current_state); 
     initial begin
         x = 0;
@@ -45,6 +45,7 @@ module FSM_sim
          x <= #85 1;
          x <= #105 1;
          x <= #125 0;
+         
          x <= #145 1;
          x <= #165 0;
          x <= #185 1;
